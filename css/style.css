@@ -1,0 +1,414 @@
+/*****************************
+*
+* feeLife css
+*
+*/
+
+/************************
+*
+* 共　通
+*
+************************/
+html, body, main {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  -webkit-font-smoothing: antialiased; /* ブラウザによって文字が太くなる現象を解除 */
+  font-feature-settings: "palt" 1;
+}
+
+/*************** フォント ***************/
+body {
+  font-family: 'HiraMinProN-W3', '游明朝体', 'Yu Mincho', YuMincho, Helvetica, Meiryo, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition:all 0.6s ease-in-out;
+  transition: 0.6s;
+  color: #FFFF66;
+}
+
+a:hover {
+	opacity: 0.6;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 40px;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 32px;
+}
+
+h5 {
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 32px;
+}
+
+p {
+  font-family: 游ゴシック体, 'Yu Gothic', YuGothic,'Hiragino Kaku Gothic ProN W3', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 32px;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    min-width: 100%;
+  }
+
+  .wrap {
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 20px;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 22px;
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    line-height: 32px;
+  }
+
+  h5 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 24px;
+  }
+}
+
+/* 小さいスマホ対応 */
+@media only screen and (max-width: 480px) {
+  h3 {
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 20px;
+  }
+  h5 {
+    font-size: 10px;
+    line-height: 18px;
+  }
+}
+
+.left {
+  padding-left: 15px;
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+
+/************************
+*
+* 共　通　パララックス
+*
+************************/
+.parallax {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  background: rgb( 0, 0, 0);
+  margin: 0;
+}
+
+@keyframes horizontal {
+    0% { transform:translateX( -3px); }
+  100% { transform:translateX(  0px); }
+}
+@keyframes vertical {
+    0% { transform:translateY(-10px); }
+  100% { transform:translateY(  0px); }
+}
+
+.arrow-down {
+  max-width: 40%;
+  max-height: 24px;
+  position: absolute;
+    top: 90%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  animation: vertical 0.8s ease-in-out infinite alternate;
+}
+
+.arrow-down img {
+  width: auto;
+  height: 100%;
+  margin: 0;
+  -webkit-transition:all 0.5s ease-in-out;
+  transition:all 0.5s ease-in-out;
+}
+
+.arrow-down img:hover {
+  -webkit-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  -o-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  transform: scale(1.4);
+}
+
+
+/* スマホ対応 */
+@media only screen and (max-width: 767px) {
+  .parallax {
+    width: auto;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .arrow-down {
+    width: 100%;
+    height: 22px;
+    position: absolute;
+      right: 0;
+      bottom: 10%;
+      left: 0;
+      margin: auto;
+    animation: vertical 0.8s ease-in-out infinite alternate;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.9);
+    display: none;
+  }
+  .arrow-down img {
+    width: auto;
+    height: 100%;
+  }
+}
+
+
+/************************
+*
+* インフォメーション
+*
+************************/
+.information {
+  color: #fff;
+  width: 100%;
+  height: 55%;
+  text-align: center;
+  padding-top: 15%;
+  margin: 0;
+}
+
+.information hr {
+  border: 0 none;
+  height: 1px;
+  color: #ffffff;
+  background-color: #ffffff;
+  width: 600px;
+}
+
+.sns {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  -js-display: flex;
+  justify-content: center;
+  position: relative;
+    top: 10px;
+    right: 0;
+    left: -42px;
+  margin: auto;
+}
+
+.sns li {
+  width: 60px;
+  margin: 0 20px;
+}
+
+.sns img {
+  width: 100%;
+  margin: 0;
+}
+
+.link {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  -js-display: flex;
+  justify-content: center;
+  position: relative;
+    top: 48px;
+    right: 0;
+    left: -42px;
+  margin: auto;
+}
+
+.link li {
+  width: 200px;
+  margin: 0 20px;
+}
+
+.link img {
+  width: 100%;
+  margin: 0;
+}
+
+#pagetop {
+  width: 100px;
+  height: 61px;
+  position: absolute;
+    top: 85%;
+    right: 10%;
+  animation: vertical 0.8s ease-in-out infinite alternate;
+  z-index: 999;
+}
+
+#pagetop img {
+  width: 100%;
+  -webkit-transition:all 0.5s ease-in-out;
+  transition:all 0.5s ease-in-out;
+}
+
+#pagetop img:hover {
+  -webkit-transform: scale(1.4);
+  -moz-transform: scale(1.4);
+  -o-transform: scale(1.4);
+  -ms-transform: scale(1.4);
+  transform: scale(1.4);
+}
+
+@media only screen and (max-height: 700px) {
+  .information {
+    padding-top: 10%;
+  }
+}
+
+/* 4:3モニター対応 */
+@media only screen and (max-width: 1200px) and (min-width: 768px) {
+  #panel3 .arrow-down {
+    position: absolute;
+      bottom: 100px;
+      margin: auto;
+  }
+}
+
+/* スマホ対応 */
+@media only screen and (max-width: 767px) {
+  .information {
+    width: 100%;
+    height: 55%;
+    position: absolute;
+      top: 20%;
+      right: 0;
+      left: 0;
+    margin: auto;
+    text-align: center;
+    padding-top: 5%;
+  }
+
+  .information hr {
+    width: 60%;
+  }
+
+  .sns {
+    width: 30%;
+    position: relative;
+      top: 5px;
+      right: 0;
+      left: -20px;
+    margin: auto;
+  }
+
+  .sns li {
+    width: 30px;
+    margin: 0 10px;
+  }
+
+  #pagetop {
+    width: 25%;
+    position: absolute;
+      top: 80%;
+      right: 0;
+      left: 0;
+    margin: auto;
+  }
+
+}
+
+/* 小さいスマホ対応 */
+@media only screen and (max-width: 480px) {
+  .information h5 {
+    line-height: 20px;
+  }
+
+  #pagetop {
+    width: 16%;
+    position: absolute;
+      top: 85%;
+      left: 75%;
+  }
+}
+
+
+/************************
+*
+* Footer
+*
+************************/
+footer {
+  width: 100%;
+  position: absolute;
+   bottom: 5%;
+}
+
+/* スマホ対応 */
+@media only screen and (max-width: 767px) {
+  footer {
+    position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    margin: auto;
+  }
+  .footer {
+    font-size: 9px;
+  }
+}
+
+/* 小さいスマホ対応 */
+@media only screen and (max-width: 480px) {
+  .footer {
+    font-size: 7px;
+  }
+}

@@ -1,0 +1,150 @@
+/*****************************
+*
+* event css
+*
+*/
+
+/************************
+*
+* P C
+*
+************************/
+
+body {
+  margin: 0;
+  background-color: #fff;
+}
+
+a {
+  color: #07519a;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  color: #333333;
+}
+
+h2 {
+  line-height: 130%;
+}
+
+h3 {
+  font-size: 1.8em;
+  line-height: 150%;
+  margin: 0;
+}
+
+h5 {
+  line-height: 140%;
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.event_contents {
+  width: 100%;
+  margin: 0 auto 20px;
+  font-feature-settings: "palt" 1;
+}
+
+.event_contents_2column {
+  width: 100%;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: flex-start;
+  font-feature-settings: "palt" 1;
+}
+
+.event_1column {
+  width: 90%;
+  margin: 0 auto 20px;
+  font-feature-settings: "palt" 1;
+}
+
+.event_2column {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  font-feature-settings: "palt" 1;
+}
+
+.event_contents_pic {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.event_contents_col {
+  width: 70%;
+  margin: 0 0 0 30px;
+  font-feature-settings: "palt" 1;
+}
+
+.event_contents_50 {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.return,
+.footer {
+  text-align: center;
+}
+
+hr {
+  margin-bottom: 24px;
+}
+
+
+/************************
+*
+* ス マ ホ
+*
+************************/
+@media only screen and (max-width: 767px) and (orientation:portrait) {
+  h2 {
+    color: red;
+    font-size: 1.2em;
+    line-height: 130%;
+  }
+
+  h3 {
+    color: red;
+    font-size: 1.2em;
+    line-height: 150%;
+    margin: 0;
+  }
+
+  h5 {
+    font-size: 0.8em;
+    line-height: 140%;
+  }
+
+  .event_contents_2column {
+    display:block;
+  }
+
+  .event_2column {
+    display:block;
+  }
+
+  .event_contents_pic {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .event_contents_col {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .event_contents_50 {
+    width: 100%;
+  }
+
+}

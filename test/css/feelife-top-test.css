@@ -1,0 +1,343 @@
+/*****************************
+*
+* feeLife TOPページ css
+*
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  color: #ffffff;
+}
+
+#panel,
+#panel1,
+#panel2,
+#panel3,
+#panel4 {
+  background-color: #000000;  /* 背景画像が読み込まれる前に表示される背景のカラー */
+}
+
+.panel_front {
+  display: block;
+  width: 280px;
+  height: auto;
+  position: absolute;
+    top: 5%;
+    right: 0;
+    bottom: auto;
+    left: 0;
+  margin: auto;
+  padding: 0 100px 0 100px;
+  border: solid 1px #fff;
+  z-index: 999;
+}
+
+.bg-pc img {
+  width: 100%;
+}
+
+.bg-pc {
+  width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+}
+
+.bg-pc img {
+  width: 100%;
+}
+
+.bg-smp {
+  display: none;
+}
+
+/* スマホ対応 */
+@media only screen and (max-width: 767px) {
+  .bg-pc,
+  .bg-pc-left {
+    display: none;
+  }
+
+  .bg-smp {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .bg-smp img {
+    width: 100%;
+    max-height: 100%;
+  }
+
+
+  .panel_front {
+    width: 50%;
+    height: auto;
+    padding: 0 20px 0 20px;
+    margin: 0 auto;
+  }
+}
+
+/*************** TOP ***************/
+.top-logo {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 300px;
+  height: 81px;
+  z-index: 999;
+}
+
+.top-logo img {
+  width: 100%;
+  margin: auto;
+}
+
+.news {
+  width: 360px;
+  position: absolute;
+    top: 60%;
+    left: 70%;
+  margin: auto;
+}
+
+.news img {
+  width: 100%;
+  -webkit-transition:all 0.6s ease-in-out;
+  transition: 0.6s;
+  opacity: 0.6;
+}
+
+.news img:hover {
+  opacity: 1;
+}
+
+/* スマホ対応 */
+@media only screen and (max-width: 767px) {
+  .top-logo {
+    width: 60%;
+    height: auto;
+    position: absolute;
+      top: 40%;
+      right: 0;
+      left: 0;
+    margin: auto;
+  }
+
+  .news {
+    width: 50%;
+    height: auto;
+    position: absolute;
+      top: 60%;
+      right: 0;
+      left: 0;
+    margin: auto;
+  }
+
+}
+
+/*************** ABOUT ***************/
+.about {
+  width: 600px;
+  position: absolute;
+  top: 24%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* スマホ対応 */
+@media only screen and (max-width: 767px) {
+  .about {
+    width: 90%;
+    height: 80%;
+    position: absolute;
+      top: 0;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+  }
+
+  .left {
+    padding-left: 0;
+    text-align: left;
+  }
+
+  .about h1 {
+    font-size: 14px;
+    line-height: 26px;
+    text-align: left;
+  }
+
+  .about h5 {
+    margin-top: 30px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+/*************** CREATORS ***************/
+.contents-panel2 {
+  display: flex;
+  -js-display: flex;
+  position: absolute;
+    top: 23%;
+    left: 50px;
+  width: 90%;
+}
+
+.creators-about {
+  justify-content: space-between;
+  align-items: flex-start;  /* 上下中央揃え */
+  width: calc(360px - 10px);
+  margin: -34px 50px 0 20px;
+}
+
+.smp-wrapper {
+  display: flex;
+  -js-display: flex;
+  width: 90%;
+}
+
+.creators {
+  justify-content: space-between;
+  align-items: flex-start; /* 上揃え */
+  width: calc(33% - 50px);
+  margin: 0 0 5px 50px;
+}
+
+.creators img {
+  width: 100%;
+}
+
+.creators h3 {
+  font-size: 20px;
+  letter-spacing: 3px;
+  line-height: 0px;
+  margin: 20px auto;
+}
+
+.creators h4 {
+  font-size: 13px;
+  letter-spacing: 2px;
+  line-height: 20px;
+}
+
+.creators p {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  line-height: 20px;
+}
+
+/* スマホ対応 */
+@media only screen and (max-width: 767px) {
+  .contents-panel2 {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+      top: 16%;
+      right: 0;
+      left: 0;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .creators-about {
+    justify-content: none;
+    align-items: none;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .smp-wrapper {
+    display: flex;
+    -js-display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .creators {
+    align-items: flex-start;
+    width: calc(28% - 5px);
+    margin: 0 auto;
+  }
+  .creators img {
+    width: 100%;
+  }
+  .creators h3 {
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 10px;
+    margin: 10px auto;
+  }
+  .creators h4,
+  .creators p {
+    display: none;
+  }
+}
+
+/*************** ARTWORKS ***************/
+.artwork {
+  display: flex;
+  -js-display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 90%;
+  position: absolute;
+    top: 23%;
+    right: 0;
+    left: 0;
+  margin: auto;
+}
+
+.artwork-list {
+  width: calc(30% - 80px);
+  margin: 10px;
+}
+
+.artwork-list img {
+  width: 100%;
+}
+
+
+/* スマホ対応 */
+@media only screen and (max-width: 767px) {
+  .artwork {
+    position: absolute;
+      top: 30%;
+    margin: auto;
+    width: 90%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+  }
+
+  .artwork-list {
+    width: calc(30% - 5px);
+    margin: 5px;
+  }
+}
+
+
+/*************** information ***************/
+.information {
+  position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+/* スマホ対応 */
+@media only screen and (max-width: 767px) {
+  .information {
+    position: absolute;
+      top: 20%;
+  }
+}
