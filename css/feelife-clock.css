@@ -30,7 +30,8 @@ a {
 #panel4,
 #panel5,
 #panel6,
-#panel7 {
+#panel7,
+#panel8 {
   background-attachment: fixed;  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
   background-size: cover;  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
     -webkit-background-size: cover;
@@ -162,7 +163,9 @@ a {
   #panel3,
   #panel4,
   #panel5,
-  #panel6 {
+  #panel6,
+  #panel7,
+  #panel8 {
     background-attachment: scroll;  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
     background-size: auto auto;  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
       -webkit-background-size: auto auto;
@@ -743,7 +746,6 @@ a {
 }
 
 
-
 /************************
 *
 * 取り扱い店舗
@@ -820,6 +822,37 @@ a {
     color: red;
   }
 }
+
+
+/************************
+*
+* 取り扱い店舗
+*
+************************/
+.gallery_box {
+  width: 100%;
+  display: -webkit-flex;/*--- safari（PC）用 ---*/
+  display: flex;
+  -webkit-flex-wrap: wrap;/*--- safari（PC）用 ---*/
+  flex-wrap: wrap;
+  justify-content: center;
+  position: absolute;
+    top: 160px;
+    right: 0;
+    left: 0;
+  margin: 0;
+}
+
+.gallery_pic {
+  width: calc(20% - 10px);
+  margin: 8px;
+}
+
+.gallery_pic img {
+  width: 100%;
+}
+
+
 
 /************************
 *
