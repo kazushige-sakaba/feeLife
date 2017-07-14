@@ -826,7 +826,7 @@ a {
 
 /************************
 *
-* 取り扱い店舗
+* 実例写真ギャラリー
 *
 ************************/
 .gallery_box {
@@ -850,6 +850,26 @@ a {
 
 .gallery_pic img {
   width: 100%;
+}
+
+
+/* スマホ対応　タテ画面 */
+@media only screen and (max-width: 767px) and (orientation:portrait) {
+  .gallery_box {
+    width: 90%;
+    height: 420px;
+    position: relative;
+      top: 200px;
+      right: 0;
+      left: 0;
+    margin: auto;
+  }
+
+  .gallery_pic {
+    width: calc(45% - 10px);
+    margin: 8px;
+  }
+
 }
 
 
